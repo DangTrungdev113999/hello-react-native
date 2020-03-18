@@ -30,6 +30,7 @@ const App: () => React$Node = () => {
     <View>
       <Avatar width={50} height={50} borderRadius={25} backgroundColor="red" />
       <Avatar width={50} height={50} borderRadius={25} backgroundColor="red" />
+      <Avatar width={50} height={50} borderRadius={25} backgroundColor="red" />
     </View>
   );
 };
