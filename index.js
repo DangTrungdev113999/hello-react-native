@@ -11,6 +11,7 @@ import TextExample from './src/components/TextInput';
 import ButtonExample from './src/components/Button';
 import TouchEventExample from './src/components/touch';
 import ScrollViewExample from './src/components/ScrollView';
+import HorizontalScroll from './src/components/HorizontalScroll';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => ScrollViewExample);
+AppRegistry.registerComponent(appName, () => HorizontalScroll);
