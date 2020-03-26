@@ -12,6 +12,7 @@ import ButtonExample from './src/components/Button';
 import TouchEventExample from './src/components/touch';
 import ScrollViewExample from './src/components/ScrollView';
 import HorizontalScroll from './src/components/HorizontalScroll';
+import FlatListExample from './src/components/FlatList';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => HorizontalScroll);
+AppRegistry.registerComponent(appName, () => FlatListExample);
