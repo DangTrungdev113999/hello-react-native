@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
-import data from '../mock/FlatListData';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import Swipeout from 'react-native-swipeout';
 
-class Item extends Component {
+class FlatListItem extends Component {
+
   render() {
     const { item, index } = this.props;
-    const swipeoutSetting = {
+    const sw = {
       autoClose: true,
-      onClose: (secId, rowId, directtion) => {
+      // onClose: (secId, rowId, directtion) => {
 
-      },
-      onOpen: (secId, rowId, directtion) => {
+      // },
+      // onOpen: (secId, rowId, directtion) => {
 
-      },
+      // },
       right: [
         {
           onPress: () => { },
@@ -21,12 +21,12 @@ class Item extends Component {
           type: 'delete',
         }
       ],
-        
+
       rowId: index,
       sectionId: 1,
     }
     return (
-      <Swipeout {...swipeoutSetting} >
+      <Swipeout {...sw} >
         <View style={style.wrapper}>
           <Image source={{ uri: item.image }} style={{ width: 100, height: 100 }} />
           <View style={style.wrapperText}>
@@ -35,17 +35,6 @@ class Item extends Component {
           </View>
         </View>
       </Swipeout>
-    )
-  }
-}
-
-class FlatListExample extends Component {
-  render() {
-    return (
-      <FlatList
-        data={data}
-        renderItem={({ item, index }) => <Item item={item} index={index} />}
-      />
     )
   }
 }
@@ -69,4 +58,4 @@ const style = StyleSheet.create({
   }
 })
 
-export default FlatListExample;
+export default FlatListItem;
